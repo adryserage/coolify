@@ -1,0 +1,20 @@
+version: '3'
+services:
+  vito:
+    image: 'vitodeploy/vito:latest'
+    ports:
+      - '80'
+    environment:
+      APP_KEY: '${APP_KEY}'
+      NAME: '${NAME}'
+      EMAIL: '${EMAIL}'
+      PASSWORD: '${PASSWORD}'
+      APP_URL: '${SERVICE_URL_VITO}'
+    volumes:
+      - 'vito-storage:/var/www/html/storage'
+      - 'vito-plugins:/var/www/html/app/Vito/Plugins'
+volumes:
+  vito-storage:
+    driver: local
+  vito-plugins:
+    driver: local
