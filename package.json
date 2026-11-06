@@ -4,8 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preinstall": "node preinstall.js"
+    "build": "vite build"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.10",
